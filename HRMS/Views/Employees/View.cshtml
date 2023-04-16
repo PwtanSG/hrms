@@ -1,0 +1,41 @@
+﻿@model HRMS.Models.UpdateEmployeeViewModel
+@{
+}
+<h2>View Employee Details</h2>
+<form method="post" action="View" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputName" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="inputEmpNo" class="form-label">Employee No.</label>
+        <input type="text" class="form-control" id="inputEmpNo" asp-for="EmployeeNo">
+    </div>
+    <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="inputContactNo" class="form-label">Contact No.</label>
+        <input type="text" class="form-control" id="inputContactNo" asp-for="ContactNo">
+    </div>
+    <div class="mb-3">
+        <label for="inputSalary" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="inputSalary" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="inputDob" class="form-label">Email</label>
+        <input type="date" class="form-control" id="inputDob" asp-for="DateOfBirth">
+    </div>
+    <div class="mb-3">
+        <label for="inputDept" class="form-label">Department</label>
+        <input type="text" class="form-control" id="inputDept" asp-for="Department">
+    </div>
+    <button type="submit" class="btn btn-warning" asp-action="View" asp-controller="Employees">Update</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Employees">Delete</button>
+</form>

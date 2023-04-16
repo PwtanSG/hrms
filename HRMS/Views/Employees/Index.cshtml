@@ -1,0 +1,33 @@
+﻿@model List<HRMS.Models.Domain.Employee>
+@{
+}
+<h1>Employee List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact no.</th>
+            <th>Date of Birth</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.EmployeeNo</td>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>@employee.ContactNo</td>
+                <td>@employee.DateOfBirth.ToString("dd-MM-yyyy")</td>
+                <td>@employee.Salary</td>
+                <td>@employee.Department</td>
+                <td><a href="Employees/View/@employee.Id" class="btn btn-success">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
