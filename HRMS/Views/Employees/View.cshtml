@@ -11,30 +11,37 @@
     <div class="mb-3">
         <label for="inputName" class="form-label">Name</label>
         <input type="text" class="form-control" id="inputName" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="inputEmpNo" class="form-label">Employee No.</label>
         <input type="text" class="form-control" id="inputEmpNo" asp-for="EmployeeNo">
+        <span asp-validation-for="EmployeeNo" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="inputEmail" class="form-label">Email</label>
         <input type="email" class="form-control" id="inputEmail" asp-for="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="inputContactNo" class="form-label">Contact No.</label>
         <input type="text" class="form-control" id="inputContactNo" asp-for="ContactNo">
+        <span asp-validation-for="ContactNo" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="inputSalary" class="form-label">Salary</label>
         <input type="number" class="form-control" id="inputSalary" asp-for="Salary">
+        <span asp-validation-for="Salary" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="inputDob" class="form-label">Email</label>
         <input type="date" class="form-control" id="inputDob" asp-for="DateOfBirth">
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="inputDept" class="form-label">Department</label>
         <input type="text" class="form-control" id="inputDept" asp-for="Department">
+        <span asp-validation-for="Department" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-warning" asp-action="View" asp-controller="Employees"><i class="bi bi-pencil-square"></i> Update</button>
     <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Employees"><i class="bi bi-trash"></i> Delete</button>

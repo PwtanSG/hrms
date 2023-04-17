@@ -89,10 +89,13 @@ namespace HRMS.Controllers
                 employee.Salary = model.Salary;
                 employee.DateOfBirth = model.DateOfBirth;
                 employee.Department = model.Department;
-                await hrmsDbContext.SaveChangesAsync();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    await hrmsDbContext.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                } 
             }
-            return RedirectToAction("Index");
+            return View("View", model);
         }
 
         [HttpPost]
