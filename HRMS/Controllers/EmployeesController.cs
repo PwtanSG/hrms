@@ -42,9 +42,13 @@ namespace HRMS.Controllers
                 DateOfBirth = addEmployeeRequest.DateOfBirth,
                 Department = addEmployeeRequest.Department,
             };
-            await hrmsDbContext.Employees.AddAsync(employee);
-            await hrmsDbContext.SaveChangesAsync();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                await hrmsDbContext.Employees.AddAsync(employee);
+                await hrmsDbContext.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View(addEmployeeRequest);
         }
 
         [HttpGet]
