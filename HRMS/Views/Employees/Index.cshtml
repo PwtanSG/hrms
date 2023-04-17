@@ -1,7 +1,16 @@
 ﻿@model List<HRMS.Models.Domain.Employee>
 @{
 }
-<h1>Employee List</h1>
+<div class="container p-1">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2>Employees List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a class="btn btn-primary text-white" asp-area="" asp-controller="Employees" asp-action="Add"><i class="bi bi-file-earmark-plus"></i> Add Employee</a>
+        </div>
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -26,7 +35,7 @@
                 <td>@employee.DateOfBirth.ToString("dd-MM-yyyy")</td>
                 <td>@employee.Salary</td>
                 <td>@employee.Department</td>
-                <td><a href="Employees/View/@employee.Id" class="btn btn-success">View</a></td>
+                <td><a href="Employees/View/@employee.Id" class="btn btn-success"><i class="bi bi-eye"></i> View</a></td>
             </tr>
         }
     </tbody>
