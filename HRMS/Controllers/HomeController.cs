@@ -1,6 +1,9 @@
-﻿using HRMS.Models;
+﻿using HRMS.Data;
+using HRMS.Models;
+using HRMS.Models.Domain;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+// using Microsoft.EntityFrameworkCore;
 
 namespace HRMS.Controllers
 {
@@ -13,6 +16,7 @@ namespace HRMS.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
